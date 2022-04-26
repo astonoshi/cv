@@ -1,0 +1,403 @@
+:root{
+    --rojo:#e50914;
+    --blanco: white;
+    --gris: #303030;
+    --gris-f: #757575;
+    --negro: #0000;
+    --tipo-titular: "Playfair Display", serif;
+    --tipo-principal: "Inter", sans-serif;    
+}
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+}
+img .figure{
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    object-fit: cover;
+    object-position: center center;
+}
+a{
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+p a{
+    display: inline;
+}
+li{
+    list-style: none;
+}
+table,
+tr,
+td{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+form,
+select,
+button,
+input,
+textarea{
+font-family: inherit;
+font-size: inherit;
+-webkit-hyphens: auto;
+hyphens: auto;
+background-color: transparent;
+display: flex;
+color: inherit;
+}
+body{
+    font-family: var(--tipo-principal);
+    font-size: 100%;
+    min-height: 100vh;
+    background-color: black;
+    color: var(--blanco);
+    }
+
+
+.circulos{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    filter: blur(40px);
+    animation: circulo1 100s linear infinite both;
+}
+
+#cursor{
+    width: 3em;
+    height: 3em;
+    background-color: white;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: 3;
+    pointer-events: none;
+    border-radius: 50%;
+    mix-blend-mode: difference;
+}
+#cursor.mini{
+    transform: scale(0.7);
+    }
+
+.circulos .circulo{
+    position: absolute;
+    width: 65%;
+    height: 65%;
+    animation: circulo1 150s linear infinite both;
+    }
+    
+.circulos .circulo1{
+    top: 0%;
+    left: 0%;
+    
+}
+
+.circulos .circulo1 .path{
+    fill: seagreen;
+    
+}
+.circulos .circulo2{
+    top: 0%;
+    right: 0%;
+}
+.circulos .circulo2 .path{
+    fill: rgb(126, 12, 126);
+}
+.circulos .circulo3{
+    bottom: 0%;
+    left: 0%;
+}
+.circulos .circulo3 .path{
+    fill: rgb(196, 156, 22);
+}
+.circulos .circulo4{
+    bottom: 0%;
+    right: 0%;
+}
+.circulos .circulo4 .path{
+    fill: rgb(10, 40, 88) ;
+}
+
+header{
+    width: 100%;
+    min-height: 5em;
+    background-color: rgb(30, 30, 31);
+    padding: 1em 2em;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+header h1{
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--blanco);
+    }
+
+header h1 a:hover{
+    background-color: rgb(75, 73, 73);  
+    color: var(--blanco);  
+}
+
+header nav{
+    
+}
+header ul{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+header li{
+    margin: 0 1em;
+}
+header li a{
+    color: var(--blanco);
+    font-weight: bold;
+    font: size 2em;;
+}
+nav ul li a:hover{
+    background-color: rgb(75, 73, 73);
+    color: var(--blanco);
+}
+
+main{
+    margin: 0 0 1em;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+section{
+    width: 100%;
+    min-height: 80vh;
+    margin: 1em 0;
+    padding: 2em;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+section .info{
+font-size: 1.2em;
+animation: aparecer1 2s ease 1 both ;
+}
+
+
+section ul{
+    margin: 2em 0 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:center;
+    align-items: center;}
+
+    
+section ul li{
+    margin: 0 1em;
+}
+section ul a{
+    font-style: italic;
+    border: 1px solid #0004;
+    border-radius: 50%;
+    padding: 1em 1em 1em;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all .5s ease;
+    animation: aparecer1 2s ease 1 backwards;
+    } 
+    section .ul:nth-child(2) .a{
+        animation-delay: .2s;
+    }
+    ul a:hover{
+        background-color: rgb(75, 73, 73);
+        color: var(--blanco);
+    }
+section h2{
+    font-family: var(--tipo-titular);
+    font-size: 4em;
+    font-weight: 400;
+    line-height: 1em;
+    color: var(--blanco);
+    transition: all .5s ease;
+    animation: aparecer1 2s ease 1 backwards;  
+    }
+
+section h3{
+    font-family: var(--tipo-titular);
+    font-size: 3em;
+    transition: all .5s ease;
+    animation: aparecer1 2s ease 1 backwards;
+}
+
+section p{
+    font-size: 1.4em;
+}
+#works h2{
+    font-size: 2.5em;
+    font-weight: bold;
+    color: var(--blanco);
+    margin: 1em 0;
+}
+.works{
+    background-color: var(--negro);
+    box-shadow: 0 0 2em white;
+
+}
+
+    section .grid{
+    width: 90%;
+    max-width: 40em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    gap: 1em;
+    margin: 1em 0;
+}
+section article{
+    width: 100%;
+    min-height: 20vh;
+    display: flex;  
+    flex-flow: wrap;  
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+section a{}
+
+section .figure{
+    width: 100%;
+}
+
+section img{
+    width: 100%;}
+
+    
+section h4{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 1.4em;
+    font-family: var(--tipo-titular);
+    font-style: italic;
+    backdrop-filter: blur(1rem);
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display:flex;
+    flex-flow:row wrap;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translatez(1) scale(1.2); 
+    transition: all .5s ease;
+        }
+
+section .article:hover h4{
+    opacity: 1;
+    transform: translateZ(1) scale(1);
+    
+}
+.works h2{
+    margin: 0 0 1em; 
+}
+
+.about{}
+.about h2{
+    margin: 0 0 1rem;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+.about p{
+    margin: 0 0 2rem;
+    font-size: 1.5em;
+    text-align: left;
+    max-width: 40em;
+}
+
+.about .rrss{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+.about li{
+    margin: 0 1em;
+    }
+
+.about  a{}
+
+.about .svg{
+    width: 3em;
+    height: 3em;
+    
+}
+
+footer{
+    background-color: var(--negro);
+    padding: 2em 0;
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+    position: relative;
+    z-index: 2;
+    }
+
+    footer .span{
+
+    }
+
+    @keyframes circulo1{
+        from{
+            transform:rotate(0deg) scale(2);
+        }
+        to{
+        transform:rotate(360deg) scale(2);
+        }
+    }
+    @keyframes aparecer1{  
+        from{
+            opacity: 0;
+            transform: translateY(50%);
+        }
+        to{
+            opacity: 1;
+            transform: translateY(0%);
+        }
+    }
+
+
+    
+
+
+
+    
+
+
+
+
+
